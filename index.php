@@ -1,5 +1,7 @@
 <?php
-include 'header.php'
+$metaTitle = "Acceuil";
+$metaDescription = "Page de présentation de l'entreprise";
+include 'header.php';
 ?>
 <main class="d-flex flex-column justify-content-between">
     <section class="mt-5 d-flex flex-row justify-content-around align-items-center container-xl">

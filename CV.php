@@ -1,4 +1,6 @@
 <?php
+$metaTitle = "CV";
+$metaDescription = "CV de Aurélien Flori";
 include 'header.php'
 ?>
 

@@ -1,4 +1,6 @@
 <?php
+$metaTitle = "Equipe";
+$metaDescription = "Présentation des membre de l'entreprise";
 include 'header.php'
 ?>
 
