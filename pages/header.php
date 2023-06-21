@@ -29,10 +29,10 @@
             <div class="collapse navbar-collapse text-center" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="index.php">Accueil</a>
+                        <a class="nav-link" aria-current="page" href="http://phpdebase.local/?page=index.php">Accueil</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="equipe.php">Équipe</a>
+                        <a class="nav-link" href="http://phpdebase.local/?page=equipe.php">Équipe</a>
                     </li>
                 </ul>
             </div>
