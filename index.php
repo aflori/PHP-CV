@@ -1,4 +1,7 @@
-  <main class="d-flex flex-column justify-content-between">
+<?php
+include 'header.php'
+?>
+<main class="d-flex flex-column justify-content-between">
     <section class="mt-5 d-flex flex-row justify-content-around align-items-center container-xl">
       <div class="d-flex flex-column text-center">
         <h1> Allons créer le produit digital de vos rêves ensemble </h1>
@@ -29,7 +32,7 @@
       </div>
     </section>
     <section class="mx-auto my-4">
-      <a class="btn btn-success btn-lg" href="equipe.html" role="button">Notre équipe</a>
+      <a class="btn btn-success btn-lg" href="equipe.php" role="button">Notre équipe</a>
     </section>
     <hr>
     <section>
@@ -54,6 +57,9 @@
       </div>
     </section>
     <section class="mx-auto my-4">
-      <a class="btn btn-success btn-lg" href="catalogue.html" role="button">Nos prestations</a>
+      <a class="btn btn-success btn-lg" href="equipe.php" role="button">Nos prestations</a>
     </section>
   </main>
+<?php
+include 'footer.php'
+?>

@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Notre équipe</title>
     <link rel="icon" href="photos/logo_team_fleury.svg" type="image/svg">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="Style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <title>Services</title>
@@ -29,10 +29,10 @@
             <div class="collapse navbar-collapse text-center" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="index.html">Accueil</a>
+                        <a class="nav-link" aria-current="page" href="index.php">Accueil</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="equipe.html">Équipe</a>
+                        <a class="nav-link" href="equipe.php">Équipe</a>
                     </li>
                 </ul>
             </div>

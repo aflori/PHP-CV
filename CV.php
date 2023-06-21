@@ -1,3 +1,7 @@
+<?php
+include 'header.php'
+?>
+
   <main class="container-fluid mx-auto my-0 bg-white">
     <section
       class="bg-white d-flex flex-column justify-content-center align-items-center position-relative container-lg">
@@ -69,3 +73,7 @@
       </div>
     </section>
   </main>
+
+<?php
+include 'footer.php'
+?>
