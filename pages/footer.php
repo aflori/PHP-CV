@@ -1,4 +1,3 @@
-http://phpdebase.local/?page=
 <div class="heigh_footer"></div>
 <footer class="est_en_bas_de_page">
     <div

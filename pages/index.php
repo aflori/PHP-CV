@@ -3,6 +3,7 @@ $metaTitle = "Acceuil";
 $metaDescription = "Page de présentation de l'entreprise";
 include 'header.php';
 ?>
+
 <main class="d-flex flex-column justify-content-between">
     <section class="mt-5 d-flex flex-row justify-content-around align-items-center container-xl">
       <div class="d-flex flex-column text-center">
@@ -62,6 +63,7 @@ include 'header.php';
       <a class="btn btn-success btn-lg" href="http://phpdebase.local/?page=equipe.php" role="button">Nos prestations</a>
     </section>
   </main>
+
 <?php
-include 'footer.php'
+include 'footer.php';
 ?>
