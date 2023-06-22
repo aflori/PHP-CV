@@ -35,7 +35,7 @@ include 'header.php';
       </div>
     </section>
     <section class="mx-auto my-4">
-      <a class="btn btn-success btn-lg" href="http://phpdebase.local/?page=equipe.php" role="button">Notre équipe</a>
+      <a class="btn btn-success btn-lg" href="http://phpdebase.local/?page=equipe" role="button">Notre équipe</a>
     </section>
     <hr>
     <section>
@@ -60,7 +60,7 @@ include 'header.php';
       </div>
     </section>
     <section class="mx-auto my-4">
-      <a class="btn btn-success btn-lg" href="http://phpdebase.local/?page=equipe.php" role="button">Nos prestations</a>
+      <a class="btn btn-success btn-lg" href="http://phpdebase.local/?page=contact" role="button">Demander un devis</a>
     </section>
   </main>
 

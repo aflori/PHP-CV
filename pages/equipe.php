@@ -12,7 +12,7 @@ include 'header.php'
       </div>
       <div class="d-flex flex-wrap justify-content-center text-center">
         <section class="equipe_section">
-          <a class="hover-img" href="http://phpdebase.local/?page=CV.php">
+          <a class="hover-img" href="http://phpdebase.local/?page=CV">
             <img class="equipe_img rounded-circle mb-3 position-relative top-50 start-50 translate-middle"
               src="photos/photo_aurelien.jpg" alt="Photo d'Aurélien"></a>
           <h2 class="">Aurélien Flori</h2>
