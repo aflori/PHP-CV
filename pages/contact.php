@@ -19,6 +19,8 @@ include 'header.php';
             $champemail = filter_input(INPUT_POST, 'AdesseEmail');
             $champRaison = filter_input(INPUT_POST, 'motifDemande');
             $champMessage = filter_input(INPUT_POST, 'MessageComplet');
+            $ilYAUneErreur = false;
+
             if ( $champCivilite !== "" and $champNom !== "" and $champPrenom !== "" and $champemail !== "" and $champRaison !== "" and $champMessage !== ""){
 
                 //date_default_timezone_get('UTC');
@@ -34,33 +36,32 @@ include 'header.php';
             }
             elseif( $champCivilite !== null or $champNom !== null or $champPrenom !== null or $champemail !== null or $champRaison !== null or $champMessage !== null )
             {
-                echo '<p class="text-danger my-3">
-                Formulaire incorect
-                </p>';
+                $ilYAUneErreur = true;
             }
+
             ?>
 
 
             <div>
                 <label for="champ1">civilité</label>
 
-                <select class="form-select" name="civilite" id="champ1">
-                    <option selected>Quelle est votre civilité</option>
+                <select class="form-select <?php if ($ilYAUneErreur and $champCivilite === "") { echo 'bg-danger'; } ?>" name="civilite" id="champ1">
+                    <option value = "" selected><?php if ($ilYAUneErreur and $champCivilite === "") { echo 'Veuillez choisir une civilité'; } else {echo 'Quelle est votre civilité?';} ?></option>
                     <option value="M.">M.</option>
                     <option value="Mme">Mme</option>
                 </select>
             </div>
             <div class="mb-3">
-                <label for="name1" class="form-label">Votre nom</label>
-                <input type="text" class="form-control" name="name1" id="name1" placeholder="Votre prénom">
+                <label for="name1" class="form-label"> Votre nom</label>
+                <input type="text" class="form-control <?php if ($ilYAUneErreur and $champNom === "") { echo 'bg-danger'; } ?>" name="name1" id="name1" placeholder="<?php if ($ilYAUneErreur and $champCivilite === "") { echo 'Veuillez indiquer votre prénom'; } else {echo 'Votre Prénom';} ?>">
             </div>
             <div class="mb-3">
                 <label for="name2" class="form-label">Votre prénom</label>
-                <input type="text" class="form-control" name="name2" id="name2" placeholder="Votre NOM">
+                <input type="text" class="form-control <?php if ($ilYAUneErreur and $champPrenom === "") { echo 'bg-danger'; } ?>" name="name2" id="name2" placeholder="<?php if ($ilYAUneErreur and $champPrenom === "") { echo 'Veuillez indiquer votre nom'; } else {echo 'Votre nom';} ?>">
             </div>
             <div class="mb-3">
                 <label for="Adresse_email" class="form-label">Votre adresse email</label>
-                <input type="email" class="form-control" name="AdesseEmail" id="Adresse_email" placeholder="name@example.com">
+                <input type="email" class="form-control <?php if ($ilYAUneErreur and $champemail === "") { echo 'bg-danger'; } ?>" name="AdesseEmail" id="Adresse_email" placeholder="<?php if ($ilYAUneErreur and $champemail === "") { echo 'Veuillez indiquer votre adresse email'; } else {echo 'name@quelque_chose.fr';} ?>">
             </div>
             <div class="mb-3">
                 <label class="form-label" for="radios">Le motif de la demande:</label>
@@ -85,7 +86,7 @@ include 'header.php';
             </div>
             <div class="mb-3">
                 <label for="message_complet" class="form-label">Message</label>
-                <textarea class="form-control" rows="3" placeholder="Message" name="MessageComplet" id="message_complet"></textarea>
+                <textarea class="form-control <?php if ($ilYAUneErreur and $champMessage === "") { echo 'bg-danger'; } ?>" rows="3" placeholder="<?php if ($ilYAUneErreur and $champMessage === "") { echo 'Veuillez préciser votre requette'; } else {echo 'Votre Message';} ?>" name="MessageComplet" id="message_complet"></textarea>
             </div>
             <button type="submit" class="btn btn-primary">Envoyer</button>
 
