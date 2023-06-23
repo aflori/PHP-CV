@@ -2,18 +2,19 @@
 
     session_start();
     $id_session = session_id();
-    if (!isset($_SESSION['premiereVisite']))
+    if (!isset($_SESSION['count']))
     {
-        $_SESSION['premiereVisite'] = true;
+        $_SESSION['count'] = 1;
 
         $dateSession = new DateTime();
         $dateSession->setTimezone(new DateTimeZone("EUROPE/PARIS"));
 
-        file_put_contents("sessions/premièreVisite.txt",
-            $dateSession->format("Y-m-d H:i:s") . "\n",
-            FILE_APPEND);
+        $_SESSION['dateFirstVisit'] = $dateSession->format("Y-m-d H:i:s");
     }
-//    session_destroy();
+    else
+    {
+        $_SESSION['count'] += 1;
+    }
 
     $nomDuLien = filter_input(INPUT_GET, "page",FILTER_SANITIZE_URL);
     if ($nomDuLien === 'index' or $nomDuLien === null)

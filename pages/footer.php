@@ -7,6 +7,20 @@
             <p class="text-black fw-normal mx-lg-5 text-center text-lg-start">contact@teamfleury.fr</p>
             <p class="text-black fw-normal mx-lg-5 text-center text-lg-start">08 07 06 05 04</p>
         </div>
+
+        <div>
+            <p class="text-black fw-normal mx-lg-5 text-center text-lg-start" > <?php
+                    echo '
+                Votre première visite du site a été fait le ', $_SESSION['dateFirstVisit'], '
+            </p>';
+                    echo '
+            <p class="text-black fw-normal mx-lg-5 text-center text-lg-start" >
+                ';
+                    echo "Vous avez regardé " . $_SESSION['count'] . ' pages.
+';
+                ?>
+            </p>
+        </div>
         <div>
             <div class="d-flex justify-content-evenly align-items-center mx-10 my-0">
                 <img class="footer__img" src="photos/icons8-github-48.png" alt="GitHub">
