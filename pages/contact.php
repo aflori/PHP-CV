@@ -14,22 +14,38 @@ include 'header.php';
             <?php
 
             $ilYAUneErreur = false;
-            $champCivilite = filter_input(INPUT_POST, 'civilite');
-            $champNom = filter_input(INPUT_POST, 'name1');
-            $champPrenom = filter_input(INPUT_POST, 'name2');
+            $champCivilite = filter_input(INPUT_POST, 'civilite', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+            $champNom = filter_input(INPUT_POST, 'name1', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+            $champPrenom = filter_input(INPUT_POST, 'name2', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
             $champemail = filter_input(INPUT_POST, 'AdesseEmail', FILTER_VALIDATE_EMAIL);
-            $champRaison = filter_input(INPUT_POST, 'motifDemande');
-            $champMessage = filter_input(INPUT_POST, 'MessageComplet');
+            $champRaison = filter_input(INPUT_POST, 'motifDemande', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+            $champMessage = filter_input(INPUT_POST, 'MessageComplet', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+
+            //function to test if their is an ' '
+            function IlYAUnEspace ($chaineDeCaracter)
+            {
+                $ArrayChar = str_split($chaineDeCaracter);
+
+                foreach ($ArrayChar as $characters) {
+                    if( $characters === ' ' )
+                    {
+                        return true;
+                    }
+                }
+
+                return false;
+            }
+
 
             if ($champCivilite !== "M."  and $champCivilite !== "Mme")
             {
                 $champCivilite = null;
             }
-            if ($champNom === "")
+            if ($champNom === "" or IlYAUnEspace($champNom) )
             {
                 $champNom = null;
             }
-            if ($champPrenom === "")
+            if ($champPrenom === "" or IlYAUnEspace($champPrenom) )
             {
                 $champPrenom = null;
             }
