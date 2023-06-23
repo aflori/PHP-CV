@@ -1,5 +1,5 @@
 <?php
-$metaTitle = "Equipe";
+$metaTitle = "Équipe";
 $metaDescription = "Présentation des membre de l'entreprise";
 include 'header.php'
 ?>
