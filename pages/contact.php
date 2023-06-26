@@ -44,7 +44,7 @@ include 'header.php';
                     $ilYAUneErreur = true;
                 }
                 if ($champNom === "" or IlYAUnEspace($champNom)) {
-                    if ($champNom == "") {
+                    if ($champNom === "") {
                         $formErrors['name1'] = 'Veuillez indiquer votre prénom';
                     } else {
                         $formErrors['name1'] = 'Veuillez indiquer un prénom valide';
@@ -53,7 +53,7 @@ include 'header.php';
                     $ilYAUneErreur = true;
                 }
                 if ($champPrenom === "" or IlYAUnEspace($champPrenom)) {
-                    if ($champNom == "") {
+                    if ($champPrenom === "") {
                         $formErrors['name2'] = 'Veuillez indiquer votre nom';
                     } else {
                         $formErrors['name2'] = 'Veuillez indiquer un nom valide';
@@ -114,7 +114,7 @@ include 'header.php';
             </div>
             <div class="mb-3">
                 <label for="name1" class="form-label"> Votre nom</label>
-                <input type="text" class="form-control <?php if ($ilYAUneErreur and $champNom === null) { echo 'bg-danger'; } ?>" name="name1" id="name1" placeholder="<?php if ($ilYAUneErreur and $champCivilite === null) { echo $formErrors['name1']; } else {echo 'Votre Prénom';} ?>">
+                <input type="text" class="form-control <?php if ($ilYAUneErreur and $champNom === null) { echo 'bg-danger'; } ?>" name="name1" id="name1" placeholder="<?php if ($ilYAUneErreur and $champNom === null) { echo $formErrors['name1']; } else {echo 'Votre Prénom';} ?>">
             </div>
             <div class="mb-3">
                 <label for="name2" class="form-label">Votre prénom</label>
@@ -161,4 +161,4 @@ include 'header.php';
 
 <?php
 include 'footer.php';
-?>
+

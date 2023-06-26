@@ -31,5 +31,5 @@
     else:
         require 'erreur404.html';
     endif;
-?>
+
 
