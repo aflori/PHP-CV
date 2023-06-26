@@ -16,26 +16,20 @@
         $_SESSION['count'] += 1;
     }
 
+    $routes = [
+        'index' => "pages/index.php",
+        null => "pages/index.php",
+        'equipe' => "pages/equipe.php",
+        'CV' => "pages/CV.php",
+        'contact' => 'pages/contact.php'
+    ];
+
     $nomDuLien = filter_input(INPUT_GET, "page",FILTER_SANITIZE_URL);
-    if ($nomDuLien === 'index' or $nomDuLien === null)
-    {
-        include "pages/index.php";
-    }
-    elseif ($nomDuLien === 'equipe')
-    {
-        include "pages/equipe.php";
-    }
-    elseif ($nomDuLien === 'CV')
-    {
-        include "pages/CV.php";
-    }
-    elseif ($nomDuLien === 'contact')
-    {
-        include 'pages/contact.php';
-    }
-    else
-    {
-        include "erreur404.html";
-    }
+
+    if ( isset($routes[$nomDuLien]) ):
+        require $routes[$nomDuLien];
+    else:
+        require 'erreur404.html';
+    endif;
 ?>
 
